@@ -14,6 +14,8 @@ class SwitchSettingTableViewCell: UITableViewCell {
     
     @IBOutlet weak var `switch`: UISwitch!
     
+    weak var delegate: SwitchSettingDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,4 +27,13 @@ class SwitchSettingTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func switchChanged(_ sender: Any) {
+        delegate?.cell(self, changeValueTo: `switch`.isOn)
+    }
+    
+    
+}
+
+protocol SwitchSettingDelegate: AnyObject {
+    func cell(_ cell: SwitchSettingTableViewCell, changeValueTo isOn: Bool)
 }

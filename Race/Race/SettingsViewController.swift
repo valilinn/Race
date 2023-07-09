@@ -67,6 +67,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "switchSettingCell", for: indexPath) as? SwitchSettingTableViewCell else { return UITableViewCell() }
             cell.settingName.text = settings[index].settingName
             cell.`switch`.isOn = (settings[index].settingValue as? Bool) ?? false
+            cell.delegate = self
             
             return cell
         } else {
@@ -78,4 +79,13 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         
         
     }
+}
+
+extension SettingsViewController: SwitchSettingDelegate {
+    func cell(_ cell: SwitchSettingTableViewCell, changeValueTo isOn: Bool) {
+        guard let index = tableView.indexPath(for: cell)?.row else { return }
+        settings[index].settingValue = isOn
+    }
+    
+    
 }
