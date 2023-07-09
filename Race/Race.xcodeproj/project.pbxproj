@@ -20,6 +20,10 @@
 		EA185F472A5AAE8E0087E446 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA185F462A5AAE8E0087E446 /* SettingModel.swift */; };
 		EA185F492A5AD79B0087E446 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA185F482A5AD79B0087E446 /* SettingsManager.swift */; };
 		EA185F4D2A5B22C20087E446 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA185F4C2A5B22C20087E446 /* StatsViewController.swift */; };
+		EA185F502A5B247B0087E446 /* WinnersStatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA185F4E2A5B247B0087E446 /* WinnersStatsTableViewCell.swift */; };
+		EA185F512A5B247B0087E446 /* WinnersStatsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA185F4F2A5B247B0087E446 /* WinnersStatsTableViewCell.xib */; };
+		EA185F542A5B24920087E446 /* OtherStatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA185F522A5B24920087E446 /* OtherStatsTableViewCell.swift */; };
+		EA185F552A5B24920087E446 /* OtherStatsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA185F532A5B24920087E446 /* OtherStatsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		EA185F462A5AAE8E0087E446 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
 		EA185F482A5AD79B0087E446 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		EA185F4C2A5B22C20087E446 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
+		EA185F4E2A5B247B0087E446 /* WinnersStatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnersStatsTableViewCell.swift; sourceTree = "<group>"; };
+		EA185F4F2A5B247B0087E446 /* WinnersStatsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WinnersStatsTableViewCell.xib; sourceTree = "<group>"; };
+		EA185F522A5B24920087E446 /* OtherStatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherStatsTableViewCell.swift; sourceTree = "<group>"; };
+		EA185F532A5B24920087E446 /* OtherStatsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherStatsTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +100,10 @@
 				EA185F432A5AA62C0087E446 /* OpenSettingsTableViewCell.xib */,
 				EA185F3D2A5AA5C50087E446 /* SwitchSettingTableViewCell.swift */,
 				EA185F3E2A5AA5C50087E446 /* SwitchSettingTableViewCell.xib */,
+				EA185F4E2A5B247B0087E446 /* WinnersStatsTableViewCell.swift */,
+				EA185F4F2A5B247B0087E446 /* WinnersStatsTableViewCell.xib */,
+				EA185F522A5B24920087E446 /* OtherStatsTableViewCell.swift */,
+				EA185F532A5B24920087E446 /* OtherStatsTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -158,6 +170,8 @@
 				EA185F452A5AA62C0087E446 /* OpenSettingsTableViewCell.xib in Resources */,
 				EA185F332A5A02E30087E446 /* Assets.xcassets in Resources */,
 				EA185F402A5AA5C50087E446 /* SwitchSettingTableViewCell.xib in Resources */,
+				EA185F512A5B247B0087E446 /* WinnersStatsTableViewCell.xib in Resources */,
+				EA185F552A5B24920087E446 /* OtherStatsTableViewCell.xib in Resources */,
 				EA185F312A5A02E00087E446 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -170,10 +184,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA185F3F2A5AA5C50087E446 /* SwitchSettingTableViewCell.swift in Sources */,
+				EA185F502A5B247B0087E446 /* WinnersStatsTableViewCell.swift in Sources */,
 				EA185F2E2A5A02E00087E446 /* SettingsViewController.swift in Sources */,
 				EA185F4D2A5B22C20087E446 /* StatsViewController.swift in Sources */,
 				EA185F472A5AAE8E0087E446 /* SettingModel.swift in Sources */,
 				EA185F492A5AD79B0087E446 /* SettingsManager.swift in Sources */,
+				EA185F542A5B24920087E446 /* OtherStatsTableViewCell.swift in Sources */,
 				EA185F442A5AA62C0087E446 /* OpenSettingsTableViewCell.swift in Sources */,
 				EA185F2A2A5A02E00087E446 /* AppDelegate.swift in Sources */,
 				EA185F2C2A5A02E00087E446 /* SceneDelegate.swift in Sources */,
