@@ -9,6 +9,13 @@ import UIKit
 
 class WinnersStatsTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var winnerImageView: UIImageView!
+   
+    @IBOutlet weak var playerNameLabel: UILabel!
+    
+    @IBOutlet weak var pointsLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

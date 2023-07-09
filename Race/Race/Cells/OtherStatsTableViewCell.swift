@@ -9,6 +9,13 @@ import UIKit
 
 class OtherStatsTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var playerNumber: UILabel!
+    
+    @IBOutlet weak var playerNameLabel: UILabel!
+    
+    @IBOutlet weak var pointsLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
