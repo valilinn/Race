@@ -19,6 +19,7 @@
 		EA185F452A5AA62C0087E446 /* OpenSettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA185F432A5AA62C0087E446 /* OpenSettingsTableViewCell.xib */; };
 		EA185F472A5AAE8E0087E446 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA185F462A5AAE8E0087E446 /* SettingModel.swift */; };
 		EA185F492A5AD79B0087E446 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA185F482A5AD79B0087E446 /* SettingsManager.swift */; };
+		EA185F4D2A5B22C20087E446 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA185F4C2A5B22C20087E446 /* StatsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		EA185F432A5AA62C0087E446 /* OpenSettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenSettingsTableViewCell.xib; sourceTree = "<group>"; };
 		EA185F462A5AAE8E0087E446 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
 		EA185F482A5AD79B0087E446 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		EA185F4C2A5B22C20087E446 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				EA185F2D2A5A02E00087E446 /* SettingsViewController.swift */,
 				EA185F482A5AD79B0087E446 /* SettingsManager.swift */,
 				EA185F462A5AAE8E0087E446 /* SettingModel.swift */,
+				EA185F4C2A5B22C20087E446 /* StatsViewController.swift */,
 				EA185F2F2A5A02E00087E446 /* Main.storyboard */,
 				EA185F412A5AA5DA0087E446 /* Cells */,
 				EA185F322A5A02E30087E446 /* Assets.xcassets */,
@@ -168,6 +171,7 @@
 			files = (
 				EA185F3F2A5AA5C50087E446 /* SwitchSettingTableViewCell.swift in Sources */,
 				EA185F2E2A5A02E00087E446 /* SettingsViewController.swift in Sources */,
+				EA185F4D2A5B22C20087E446 /* StatsViewController.swift in Sources */,
 				EA185F472A5AAE8E0087E446 /* SettingModel.swift in Sources */,
 				EA185F492A5AD79B0087E446 /* SettingsManager.swift in Sources */,
 				EA185F442A5AA62C0087E446 /* OpenSettingsTableViewCell.swift in Sources */,
