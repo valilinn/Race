@@ -27,7 +27,7 @@
         <!--RaceApp-->
         <scene sceneID="XiH-2h-qpc">
             <objects>
-                <viewController id="8N0-RM-hPR" sceneMemberID="viewController">
+                <viewController id="8N0-RM-hPR" customClass="MainViewController" customModule="Race" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uc5-qP-Ufq">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,7 +52,7 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <segue destination="CKf-XU-Wwh" kind="show" id="66k-TS-Oxk"/>
+                                    <action selector="startRace:" destination="8N0-RM-hPR" eventType="touchUpInside" id="bVg-Jw-ocl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ekb-PI-FBn">
@@ -111,22 +111,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="myN-Wy-XRr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-606.87022900763361" y="-133.09859154929578"/>
-        </scene>
-        <!--Race!-->
-        <scene sceneID="Vrg-Kd-RMI">
-            <objects>
-                <viewController id="CKf-XU-Wwh" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="RFy-Q7-os3">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="qOr-xi-I1u"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Race!" largeTitleDisplayMode="never" style="editor" id="sel-9g-aEZ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kw3-8y-wgE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="221" y="-133"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="sn0-Za-e1P">
