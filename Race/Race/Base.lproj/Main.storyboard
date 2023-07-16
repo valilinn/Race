@@ -32,14 +32,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="raceStartImage" translatesAutoresizingMaskIntoConstraints="NO" id="EWv-Og-lJ3">
-                                <rect key="frame" x="0.0" y="155" width="393" height="663"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="car01" translatesAutoresizingMaskIntoConstraints="NO" id="EWv-Og-lJ3">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fm9-nz-YT2">
-                                <rect key="frame" x="114.66666666666669" y="381" width="164" height="90"/>
+                                <rect key="frame" x="114.66666666666669" y="405" width="164" height="74.333333333333314"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="cpK-M7-0fw"/>
                                     <constraint firstAttribute="width" constant="164" id="sac-re-xxR"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -57,7 +56,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ekb-PI-FBn">
-                                <rect key="frame" x="147" y="494" width="99" height="56"/>
+                                <rect key="frame" x="147" y="502.33333333333326" width="99" height="56"/>
                                 <color key="backgroundColor" red="0.47596049309999999" green="0.30971527100000001" blue="0.76866960529999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <state key="normal" title="Button"/>
@@ -72,14 +71,14 @@
                         <viewLayoutGuide key="safeArea" id="GnD-2q-sfc"/>
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                         <constraints>
-                            <constraint firstItem="EWv-Og-lJ3" firstAttribute="leading" secondItem="GnD-2q-sfc" secondAttribute="leading" id="4as-p0-zqg"/>
-                            <constraint firstItem="GnD-2q-sfc" firstAttribute="trailing" secondItem="EWv-Og-lJ3" secondAttribute="trailing" id="5DB-H8-edF"/>
                             <constraint firstItem="Ekb-PI-FBn" firstAttribute="top" secondItem="Fm9-nz-YT2" secondAttribute="bottom" constant="23" id="5gn-IY-KOl"/>
                             <constraint firstItem="Ekb-PI-FBn" firstAttribute="centerX" secondItem="uc5-qP-Ufq" secondAttribute="centerX" id="6Mi-s1-Vht"/>
-                            <constraint firstItem="EWv-Og-lJ3" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="GnD-2q-sfc" secondAttribute="bottom" id="GD4-tO-LVw"/>
-                            <constraint firstItem="EWv-Og-lJ3" firstAttribute="top" secondItem="GnD-2q-sfc" secondAttribute="top" id="HEJ-sK-ta8"/>
+                            <constraint firstItem="EWv-Og-lJ3" firstAttribute="leading" secondItem="GnD-2q-sfc" secondAttribute="leading" id="Fl1-84-YsJ"/>
+                            <constraint firstItem="Fm9-nz-YT2" firstAttribute="top" secondItem="GnD-2q-sfc" secondAttribute="top" constant="250" id="JhT-eS-W13"/>
+                            <constraint firstAttribute="bottom" secondItem="EWv-Og-lJ3" secondAttribute="bottom" id="URa-QQ-aUE"/>
                             <constraint firstItem="Fm9-nz-YT2" firstAttribute="centerX" secondItem="uc5-qP-Ufq" secondAttribute="centerX" id="VVv-NA-evp"/>
-                            <constraint firstItem="Fm9-nz-YT2" firstAttribute="centerY" secondItem="uc5-qP-Ufq" secondAttribute="centerY" id="cjQ-m9-Vc1"/>
+                            <constraint firstItem="EWv-Og-lJ3" firstAttribute="top" secondItem="uc5-qP-Ufq" secondAttribute="top" id="bIs-Qc-MaS"/>
+                            <constraint firstItem="EWv-Og-lJ3" firstAttribute="trailing" secondItem="GnD-2q-sfc" secondAttribute="trailing" id="lsp-vB-ETL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="RaceApp" id="pNw-zx-D4c">
@@ -292,9 +291,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="car01" width="1150" height="2115"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
-        <image name="raceStartImage" width="900" height="506"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
