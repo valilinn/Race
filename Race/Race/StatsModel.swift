@@ -8,15 +8,24 @@
 import Foundation
 import UIKit
 
+//struct Stats {
+//    var imageOfWinners: UIImage?
+//    var statsImage: StatsImage?
+//    var statsNumber: Int?
+//    let playerName: String
+//    var points: Int
+//}
+//
+//enum StatsImage {
+//    case withImage
+//    case withoutImage
+//}
+
 struct Stats {
-    var imageOfWinners: UIImage?
-    var statsImage: StatsImage?
+    var image: UIImage?
     var statsNumber: Int?
-    let playerName: String
+    let name: String
     var points: Int
+    
 }
 
-enum StatsImage {
-    case withImage
-    case withoutImage
-}
