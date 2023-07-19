@@ -18,8 +18,8 @@ class RaceViewController: UIViewController {
     @IBOutlet weak var carPositionSegmentControl: UISegmentedControl!
     
     
-    var carImage = UIImageView(image: UIImage(named: "carTop"))
-//    var carImage = UIImageView(image: UIImage(named: "mainCar"))
+//    var carImage = UIImageView(image: UIImage(named: "carTop"))
+    var carImage = UIImageView(image: UIImage(named: "mainCar"))
     var treeImageGreen = UIImageView(image: UIImage(named: "tree"))
     var treeImageBlack = UIImageView(image: UIImage(named: "tree1"))
     var treeImageBush = UIImageView(image: UIImage(named: "bush"))
@@ -45,8 +45,19 @@ class RaceViewController: UIViewController {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let carGestureLeft = UISwipeGestureRecognizer()
+        carGestureLeft.direction = .left
+        carGestureLeft.addTarget(self, action: #selector(carGestureAction))
+        
+        let carGestureRight = UISwipeGestureRecognizer()
+        carGestureRight.direction = .right
+        carGestureRight.addTarget(self, action: #selector(carGestureAction))
+        
+        
+        view.addGestureRecognizer(carGestureLeft)
+        view.addGestureRecognizer(carGestureRight)
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -54,6 +65,23 @@ class RaceViewController: UIViewController {
         setupFrames()
        
     }
+    
+    @objc
+    func carGestureAction(sender: UISwipeGestureRecognizer) {
+        if carImage.frame.origin.x == centerOriginCoordinate {
+            switch sender.direction {
+            case .left:
+                carImage.frame.origin.x = leftOriginCoordinate
+            case .right:
+                carImage.frame.origin.x = rightOriginCoordinate
+            default:
+                break
+            }
+        } else  {
+            carImage.frame.origin.x = centerOriginCoordinate
+        }
+    }
+    
     
     //MARK: - Setup Views
     func setupCoordinates() {
@@ -94,9 +122,11 @@ class RaceViewController: UIViewController {
                                 height: elementSize)
         
         carImage.layer.shadowColor = UIColor.gray.cgColor
-        carImage.layer.shadowOpacity = 1
+        carImage.layer.shadowOpacity = 3
         carImage.layer.shadowOffset = .zero
-        carImage.layer.cornerRadius = 10
+        carImage.layer.cornerRadius = 15
+        
+        carImage.contentMode = .scaleAspectFit
         
         view.addSubview(carImage)
         
