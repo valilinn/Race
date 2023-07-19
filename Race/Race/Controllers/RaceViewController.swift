@@ -15,13 +15,12 @@ class RaceViewController: UIViewController {
     }
     
     //MARK: - UI Elements
-    @IBOutlet weak var carPositionSegmentControl: UISegmentedControl!
     
     
 //    var carImage = UIImageView(image: UIImage(named: "carTop"))
     var carImage = UIImageView(image: UIImage(named: "mainCar"))
     var treeImageGreen = UIImageView(image: UIImage(named: "tree"))
-    var treeImageBlack = UIImageView(image: UIImage(named: "tree1"))
+    var treeImageBlack = UIImageView(image: UIImage(named: "blackWhite"))
     var treeImageBush = UIImageView(image: UIImage(named: "bush"))
     var rockImage = UIImageView(image: UIImage(named: "rock"))
     var rocksImage = UIImageView(image: UIImage(named: "rock1"))
@@ -40,7 +39,7 @@ class RaceViewController: UIViewController {
     
     //car size
     var elementSize: CGFloat = 0
-    var defaultPadding: CGFloat = 40
+    var defaultPadding: CGFloat = 10
 
     //MARK: - Lifecycle
     override func viewDidLoad() {
@@ -72,13 +71,29 @@ class RaceViewController: UIViewController {
             switch sender.direction {
             case .left:
                 carImage.frame.origin.x = leftOriginCoordinate
+//                moveRockTo(.left)
+//                moveGreenTreeTo(.left)
+//                moveRocksTo(.left)
+//                moveBlackTreeTo(.left)
+//                moveTreeBushTo(.left)
             case .right:
                 carImage.frame.origin.x = rightOriginCoordinate
+//                moveRockTo(.center)
+//                moveGreenTreeTo(.center)
+//                moveRocksTo(.center)
+//                moveBlackTreeTo(.center)
+//                moveTreeBushTo(.center)
+                
             default:
                 break
             }
         } else  {
             carImage.frame.origin.x = centerOriginCoordinate
+//            moveRockTo(.right)
+//            moveGreenTreeTo(.right)
+//            moveRocksTo(.right)
+//            moveBlackTreeTo(.right)
+//            moveTreeBushTo(.right)
         }
     }
     
@@ -100,8 +115,6 @@ class RaceViewController: UIViewController {
     
     func setupFrames() {
         
-        carPositionSegmentControl.selectedSegmentIndex = 1
-        
         setupCar()
         setupTreeGreen()
         setupTreeBlack()
@@ -112,9 +125,7 @@ class RaceViewController: UIViewController {
     }
     
     func setupCar() {
-        //y
         let yCoordinateOfCar = screenHeight - bottomSafeAreaPadding - defaultPadding - elementSize
-        
         
         carImage.frame = CGRect(x: centerOriginCoordinate,
                                 y: yCoordinateOfCar,
@@ -134,7 +145,7 @@ class RaceViewController: UIViewController {
     
     func setupTreeGreen() {
         let yCoordinateOfTreeGreen = (screenHeight - elementSize) / 2    // по центру
-        treeImageGreen.frame = CGRect(x: leftOriginCoordinate,
+        treeImageGreen.frame = CGRect(x: centerOriginCoordinate,
                                  y: yCoordinateOfTreeGreen,
                                  width: elementSize,
                                  height: elementSize)
@@ -184,32 +195,6 @@ class RaceViewController: UIViewController {
     }
     
 //MARK: - Moves
-    @IBAction func changeCarPosition(_ sender: UISegmentedControl) {
-        switch sender.selectedSegmentIndex {
-        case 0:
-            moveCarTo(.left)
-            moveRockTo(.left)
-            moveGreenTreeTo(.left)
-            moveRocksTo(.left)
-            moveBlackTreeTo(.left)
-            moveTreeBushTo(.left)
-        case 2:
-            moveCarTo(.right)
-            moveRockTo(.right)
-            moveGreenTreeTo(.right)
-            moveRocksTo(.right)
-            moveBlackTreeTo(.right)
-            moveTreeBushTo(.right)
-        default:
-            moveCarTo(.center)
-            moveRockTo(.center)
-            moveGreenTreeTo(.center)
-            moveRocksTo(.center)
-            moveBlackTreeTo(.center)
-            moveTreeBushTo(.center)
-        }
-        
-    }
     
     func moveCarTo(_ position: ElementPosition) {
         switch position {

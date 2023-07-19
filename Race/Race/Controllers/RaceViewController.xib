@@ -10,7 +10,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RaceViewController" customModule="Race" customModuleProvider="target">
             <connections>
-                <outlet property="carPositionSegmentControl" destination="Et1-vl-QZo" id="50b-NN-ePe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,28 +18,23 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Et1-vl-QZo">
-                    <rect key="frame" x="105.66666666666669" y="791" width="182" height="32"/>
-                    <segments>
-                        <segment title="Left"/>
-                        <segment title="Center"/>
-                        <segment title="Right"/>
-                    </segments>
-                    <connections>
-                        <action selector="changeCarPosition:" destination="-1" eventType="valueChanged" id="TY6-Co-NH0"/>
-                    </connections>
-                </segmentedControl>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="road" translatesAutoresizingMaskIntoConstraints="NO" id="1Ps-h8-QJv">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="Et1-vl-QZo" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="4" id="PN0-Ab-9qh"/>
-                <constraint firstItem="Et1-vl-QZo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="aWf-qr-DoA"/>
+                <constraint firstItem="1Ps-h8-QJv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="FPN-td-QXJ"/>
+                <constraint firstAttribute="trailing" secondItem="1Ps-h8-QJv" secondAttribute="trailing" id="Rih-ta-tpY"/>
+                <constraint firstItem="1Ps-h8-QJv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="VzO-6A-ZUY"/>
+                <constraint firstAttribute="bottom" secondItem="1Ps-h8-QJv" secondAttribute="bottom" id="kg0-kQ-gkh"/>
             </constraints>
             <point key="canvasLocation" x="125.95419847328243" y="20.422535211267608"/>
         </view>
     </objects>
     <resources>
+        <image name="road" width="360" height="639"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
