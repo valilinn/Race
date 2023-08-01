@@ -28,6 +28,8 @@
 		EA26DEE02A6478C700AE9E91 /* RaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26DEDE2A6478C700AE9E91 /* RaceViewController.swift */; };
 		EA26DEE12A6478C700AE9E91 /* RaceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA26DEDF2A6478C700AE9E91 /* RaceViewController.xib */; };
 		EA26DEE32A64791C00AE9E91 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA26DEE22A64791C00AE9E91 /* MainViewController.swift */; };
+		EABD439E2A7966EC003BB23B /* lottieCar.json in Resources */ = {isa = PBXBuildFile; fileRef = EABD439D2A7966EC003BB23B /* lottieCar.json */; };
+		EABD43A12A7967C5003BB23B /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = EABD43A02A7967C5003BB23B /* Lottie */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,7 @@
 		EA26DEDE2A6478C700AE9E91 /* RaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceViewController.swift; sourceTree = "<group>"; };
 		EA26DEDF2A6478C700AE9E91 /* RaceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RaceViewController.xib; sourceTree = "<group>"; };
 		EA26DEE22A64791C00AE9E91 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		EABD439D2A7966EC003BB23B /* lottieCar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottieCar.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EABD43A12A7967C5003BB23B /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +100,7 @@
 				EA185F322A5A02E30087E446 /* Assets.xcassets */,
 				EA185F342A5A02E30087E446 /* LaunchScreen.storyboard */,
 				EA185F372A5A02E30087E446 /* Info.plist */,
+				EABD439D2A7966EC003BB23B /* lottieCar.json */,
 			);
 			path = Race;
 			sourceTree = "<group>";
@@ -152,6 +157,9 @@
 			dependencies = (
 			);
 			name = Race;
+			packageProductDependencies = (
+				EABD43A02A7967C5003BB23B /* Lottie */,
+			);
 			productName = Race;
 			productReference = EA185F262A5A02E00087E446 /* Race.app */;
 			productType = "com.apple.product-type.application";
@@ -180,6 +188,9 @@
 				Base,
 			);
 			mainGroup = EA185F1D2A5A02E00087E446;
+			packageReferences = (
+				EABD439F2A7967C5003BB23B /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = EA185F272A5A02E00087E446 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -197,6 +208,7 @@
 				EA185F362A5A02E30087E446 /* LaunchScreen.storyboard in Resources */,
 				EA26DEE12A6478C700AE9E91 /* RaceViewController.xib in Resources */,
 				EA185F452A5AA62C0087E446 /* OpenSettingsTableViewCell.xib in Resources */,
+				EABD439E2A7966EC003BB23B /* lottieCar.json in Resources */,
 				EA185F332A5A02E30087E446 /* Assets.xcassets in Resources */,
 				EA185F402A5AA5C50087E446 /* SwitchSettingTableViewCell.xib in Resources */,
 				EA185F512A5B247B0087E446 /* WinnersStatsTableViewCell.xib in Resources */,
@@ -442,6 +454,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EABD439F2A7967C5003BB23B /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EABD43A02A7967C5003BB23B /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EABD439F2A7967C5003BB23B /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EA185F1E2A5A02E00087E446 /* Project object */;
 }

@@ -20,7 +20,7 @@ class RaceViewController: UIViewController {
 //    var carImage = UIImageView(image: UIImage(named: "carTop"))
     var carImage = UIImageView(image: UIImage(named: "mainCar"))
     var treeImageGreen = UIImageView(image: UIImage(named: "tree"))
-    var treeImageBlack = UIImageView(image: UIImage(named: "blackWhite"))
+    var treeImageBlack = UIImageView(image: UIImage(named: "treeBlack"))
     var treeImageBush = UIImageView(image: UIImage(named: "bush"))
     var rockImage = UIImageView(image: UIImage(named: "rock"))
     var rocksImage = UIImageView(image: UIImage(named: "rock1"))

@@ -35,6 +35,16 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="car01" translatesAutoresizingMaskIntoConstraints="NO" id="EWv-Og-lJ3">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z3N-3T-b3s" customClass="LottieAnimationView" customModule="Lottie">
+                                <rect key="frame" x="116.66666666666669" y="294" width="160" height="185"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="123-t1-yB3"/>
+                                    <constraint firstAttribute="height" constant="185" id="z5H-9e-FSO"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="lottieCar"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fm9-nz-YT2">
                                 <rect key="frame" x="114.66666666666669" y="405" width="164" height="74.333333333333314"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
@@ -75,9 +85,11 @@
                             <constraint firstItem="Ekb-PI-FBn" firstAttribute="centerX" secondItem="uc5-qP-Ufq" secondAttribute="centerX" id="6Mi-s1-Vht"/>
                             <constraint firstItem="EWv-Og-lJ3" firstAttribute="leading" secondItem="GnD-2q-sfc" secondAttribute="leading" id="Fl1-84-YsJ"/>
                             <constraint firstItem="Fm9-nz-YT2" firstAttribute="top" secondItem="GnD-2q-sfc" secondAttribute="top" constant="250" id="JhT-eS-W13"/>
+                            <constraint firstItem="z3N-3T-b3s" firstAttribute="centerX" secondItem="uc5-qP-Ufq" secondAttribute="centerX" id="TpV-2B-FNG"/>
                             <constraint firstAttribute="bottom" secondItem="EWv-Og-lJ3" secondAttribute="bottom" id="URa-QQ-aUE"/>
                             <constraint firstItem="Fm9-nz-YT2" firstAttribute="centerX" secondItem="uc5-qP-Ufq" secondAttribute="centerX" id="VVv-NA-evp"/>
                             <constraint firstItem="EWv-Og-lJ3" firstAttribute="top" secondItem="uc5-qP-Ufq" secondAttribute="top" id="bIs-Qc-MaS"/>
+                            <constraint firstItem="Ekb-PI-FBn" firstAttribute="top" secondItem="z3N-3T-b3s" secondAttribute="bottom" constant="23.333333333333258" id="dEs-TE-riY"/>
                             <constraint firstItem="EWv-Og-lJ3" firstAttribute="trailing" secondItem="GnD-2q-sfc" secondAttribute="trailing" id="lsp-vB-ETL"/>
                         </constraints>
                     </view>
@@ -108,6 +120,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="animationView" destination="z3N-3T-b3s" id="3TK-97-cdF"/>
                         <outlet property="mainImage" destination="EWv-Og-lJ3" id="TRE-7J-fHT"/>
                     </connections>
                 </viewController>

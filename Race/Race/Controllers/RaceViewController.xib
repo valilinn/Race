@@ -18,7 +18,7 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="road" translatesAutoresizingMaskIntoConstraints="NO" id="1Ps-h8-QJv">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="road2" translatesAutoresizingMaskIntoConstraints="NO" id="1Ps-h8-QJv">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                 </imageView>
             </subviews>
@@ -34,7 +34,7 @@
         </view>
     </objects>
     <resources>
-        <image name="road" width="360" height="639"/>
+        <image name="road2" width="2048" height="4096"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

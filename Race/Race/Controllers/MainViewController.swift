@@ -6,16 +6,25 @@
 //
 
 import UIKit
+import Lottie
 
 class MainViewController: UIViewController {
     
     
     @IBOutlet weak var mainImage: UIImageView!
+//    private var animationView: LottieAnimationView?
+    @IBOutlet weak var animationView: LottieAnimationView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        blurBackground()
-        // Do any additional setup after loading the view.
+//        animationView = .init(name: "lottieCar")
+//        animationView!.frame = view.bounds
+        animationView!.contentMode = .scaleAspectFit
+        animationView!.loopMode = .loop
+        animationView!.animationSpeed = 0.5
+//        view.addSubview(animationView!)
+        animationView!.play()
+
     }
     
 
