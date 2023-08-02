@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Color of tint
         UINavigationBar.appearance().tintColor = UIColor.gray
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.gray]
+        
         return true
     }
 

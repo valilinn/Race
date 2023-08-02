@@ -9,6 +9,7 @@ import UIKit
 
 class RaceViewController: UIViewController {
     
+  
     
     //MARK: - UI Elements
     
@@ -19,12 +20,27 @@ class RaceViewController: UIViewController {
     var rockImage = UIImageView(image: UIImage(named: "rock"))
     var rocksImage = UIImageView(image: UIImage(named: "rock1"))
     
+    
     //MARK: - Coordinates
     var screenHeight: CGFloat = 0
     var screenWidth: CGFloat = 0
     var bottomSafeAreaPadding: CGFloat = 0
     var topSafeAreaPadding: CGFloat = 0
     var navigationBarHeight: CGFloat = 0
+    
+    let treeGreenTopSpacing: CGFloat = 50
+    let treeBlackTopSpacing: CGFloat = 500
+    let treeBushTopSpacing: CGFloat = 800
+    let rockTopSpacing: CGFloat = 600
+    let rocksTopSpacing: CGFloat = 300
+    
+    let treeGreenBottomSpacing: CGFloat = 150
+    let treeBlackBottomSpacing: CGFloat = 50
+    let treeBushBottomSpacing: CGFloat = 200
+    let rockBottomSpacing: CGFloat = 10
+    let rocksBottomSpacing: CGFloat = 100
+    
+    let obstaclesSpeed: Double = 200
     
     //x
     var leftOriginCoordinate: CGFloat = 0
@@ -50,6 +66,7 @@ class RaceViewController: UIViewController {
         view.addGestureRecognizer(carGestureLeft)
         view.addGestureRecognizer(carGestureRight)
         
+       
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -58,6 +75,9 @@ class RaceViewController: UIViewController {
        
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        animateObstacles()
+    }
     
     @objc
     func carGestureAction(sender: UISwipeGestureRecognizer) {
@@ -130,8 +150,8 @@ class RaceViewController: UIViewController {
     }
     
     func setupTreeGreen() {
-        let yCoordinateOfTreeGreen = (screenHeight - elementSize) / 2    // по центру
-        treeImageGreen.frame = CGRect(x: centerOriginCoordinate,
+        let yCoordinateOfTreeGreen = -elementSize - treeGreenTopSpacing
+        treeImageGreen.frame = CGRect(x: rightOriginCoordinate,
                                  y: yCoordinateOfTreeGreen,
                                  width: elementSize,
                                  height: elementSize)
@@ -141,8 +161,8 @@ class RaceViewController: UIViewController {
     }
     
     func setupTreeBlack() {
-        let yCoordinateOfTreeBlack = topSafeAreaPadding + navigationBarHeight + defaultPadding
-        treeImageBlack.frame = CGRect(x: leftOriginCoordinate,
+        let yCoordinateOfTreeBlack = -elementSize - treeBlackTopSpacing
+        treeImageBlack.frame = CGRect(x: centerOriginCoordinate,
                                  y: yCoordinateOfTreeBlack,
                                  width: elementSize,
                                  height: elementSize)
@@ -151,7 +171,7 @@ class RaceViewController: UIViewController {
     }
     
     func setupTreeBush() {
-        let yCoordinateOfTreeBush = (screenHeight - elementSize) / 2 + (elementSize * 2)
+        let yCoordinateOfTreeBush = -elementSize - treeBushTopSpacing
         treeImageBush.frame = CGRect(x: leftOriginCoordinate,
                                  y: yCoordinateOfTreeBush,
                                  width: elementSize,
@@ -161,7 +181,7 @@ class RaceViewController: UIViewController {
     }
     
     func setupRock() {
-        let yCoordinateOfRock = topSafeAreaPadding + navigationBarHeight + defaultPadding    // по центру
+        let yCoordinateOfRock = -elementSize - rockTopSpacing
         rockImage.frame = CGRect(x: rightOriginCoordinate,
                                  y: yCoordinateOfRock,
                                  width: elementSize,
@@ -171,8 +191,8 @@ class RaceViewController: UIViewController {
     }
     
     func setupRocks() {
-        let yCoordinateOfRocks = (screenHeight - elementSize) / 2 + (elementSize * 2)
-        rocksImage.frame = CGRect(x: rightOriginCoordinate,
+        let yCoordinateOfRocks = -elementSize - rocksTopSpacing
+        rocksImage.frame = CGRect(x: leftOriginCoordinate,
                                  y: yCoordinateOfRocks,
                                  width: elementSize,
                                  height: elementSize)
@@ -180,5 +200,40 @@ class RaceViewController: UIViewController {
         view.addSubview(rocksImage)
     }
     
+    func animateObstacles() {
+        
+        let treeGreenS = screenHeight + treeGreenTopSpacing + treeGreenBottomSpacing
+        let treeBlackS = screenHeight + treeBlackTopSpacing + treeBlackBottomSpacing
+        let treeBushS = screenHeight + treeBushTopSpacing + treeBushBottomSpacing
+        let rockS = screenHeight + rockTopSpacing + rockBottomSpacing
+        let rocksS = screenHeight + rocksTopSpacing + rocksBottomSpacing
+        
+        let treeGreenT = Double(treeGreenS) / obstaclesSpeed
+        let treeBlackT = Double(treeBlackS) / obstaclesSpeed
+        let treeBushT = Double(treeBushS) / obstaclesSpeed
+        let rockT = Double(rockS) / obstaclesSpeed
+        let rocksT = Double(rocksS) / obstaclesSpeed
+        
+        UIView.animate(withDuration: treeGreenT, delay: 0, options: [.curveLinear, .repeat]) { [weak self] in
+            self?.treeImageGreen.frame.origin.y = (self?.screenHeight ?? 1000) + (self?.treeGreenBottomSpacing ?? 0)
+        }
+        
+        UIView.animate(withDuration: treeBlackT, delay: 0, options: [.curveLinear, .repeat]) { [weak self] in
+            self?.treeImageBlack.frame.origin.y = (self?.screenHeight ?? 1000) + (self?.treeBlackBottomSpacing ?? 0)
+        }
+        
+        UIView.animate(withDuration: treeBushT, delay: 0, options: [.curveLinear, .repeat]) { [weak self] in
+            self?.treeImageBush.frame.origin.y = (self?.screenHeight ?? 1000) + (self?.treeBushBottomSpacing ?? 0)
+        }
+        
+        UIView.animate(withDuration: rockT, delay: 0, options: [.curveLinear, .repeat]) { [weak self] in
+            self?.rockImage.frame.origin.y = (self?.screenHeight ?? 1000) + (self?.rockBottomSpacing ?? 0)
+        }
+        
+        UIView.animate(withDuration: rocksT, delay: 0, options: [.curveLinear, .repeat]) { [weak self] in
+            self?.rocksImage.frame.origin.y = (self?.screenHeight ?? 1000) + (self?.rocksBottomSpacing ?? 0)
+        }
+        
+    }
     
 }
