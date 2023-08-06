@@ -28,6 +28,10 @@ class LoginViewController: UIViewController {
         view.addGestureRecognizer(tapGesture)
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     func registerKeyboardNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
@@ -67,6 +71,7 @@ extension LoginViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == loginTextField {
+            NotificationCenter.default.post(name: NSNotification.Name("updateUserName"), object: nil, userInfo: ["username": textField.text])
             passwordTextField.becomeFirstResponder()
         } else if textField == passwordTextField {
             passwordTextField.endEditing(true)

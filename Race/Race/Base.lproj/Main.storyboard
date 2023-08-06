@@ -78,13 +78,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, User!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8g-Ho-VoJ">
-                                <rect key="frame" x="145.66666666666666" y="163" width="102" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="135.33333333333334" y="163" width="122.33333333333334" height="24.666666666666657"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCc-cq-Ru4">
-                                <rect key="frame" x="258" y="163" width="46" height="24"/>
+                                <rect key="frame" x="268" y="163" width="46" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="ccg-FM-f3F"/>
                                 </constraints>
@@ -143,6 +143,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="animationView" destination="z3N-3T-b3s" id="3TK-97-cdF"/>
+                        <outlet property="helloLabel" destination="B8g-Ho-VoJ" id="t2y-1E-4Pb"/>
                         <outlet property="mainImage" destination="EWv-Og-lJ3" id="TRE-7J-fHT"/>
                     </connections>
                 </viewController>
@@ -163,9 +164,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEw-sG-a0w">
-                                <rect key="frame" x="158.33333333333334" y="600.66666666666663" width="76.666666666666657" height="32.333333333333371"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEw-sG-a0w">
+                                <rect key="frame" x="160.66666666666666" y="603" width="71.666666666666657" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

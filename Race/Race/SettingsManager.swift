@@ -14,11 +14,11 @@ class SettingsManager {
     private init() { }
     
     var settings = [
-        Setting(settingName: "Username", type: .stringSetting, settingValue: ""),
         Setting(settingName: "Music", type: .switchSetting, settingValue: true),
         Setting(settingName: "Sound", type: .switchSetting, settingValue: true),
         Setting(settingName: "Obstacles", type: .openSetting, settingValue: "Cars"),
         Setting(settingName: "Car Color", type: .openSetting, settingValue: "Red"),
-        Setting(settingName: "Car Model", type: .openSetting, settingValue: "Lamborghini")
+        Setting(settingName: "Car Model", type: .openSetting, settingValue: "Lamborghini"),
+        Setting(settingName: "Something", type: .stringSetting, settingValue: "")
     ]
 }

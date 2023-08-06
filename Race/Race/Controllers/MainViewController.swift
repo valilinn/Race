@@ -12,31 +12,34 @@ class MainViewController: UIViewController {
     
     
     @IBOutlet weak var mainImage: UIImageView!
-//    private var animationView: LottieAnimationView?
     @IBOutlet weak var animationView: LottieAnimationView!
+    @IBOutlet weak var helloLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        animationView = .init(name: "lottieCar")
-//        animationView!.frame = view.bounds
         animationView!.contentMode = .scaleAspectFit
         animationView!.loopMode = .loop
         animationView!.animationSpeed = 0.5
-//        view.addSubview(animationView!)
         animationView!.play()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(updateUserName(_:)), name: NSNotification.Name("updateUserName"), object: nil)
 
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
-    */
+    
+    @objc
+    func updateUserName(_ notification: Notification) {
+        var username = "Userr"
+        if let newName = notification.userInfo?["username"] as? String {
+            username = newName
+        }
+        helloLabel.text = "Hello, \(username)!"
+    }
+
+  
     
     @IBAction func startRace(_ sender: Any) {
         
