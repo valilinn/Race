@@ -91,6 +91,9 @@
                                 <color key="tintColor" red="0.17254901959999999" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system"/>
+                                <connections>
+                                    <segue destination="NfT-o2-90p" kind="showDetail" id="hIt-Hk-gdP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GnD-2q-sfc"/>
@@ -146,6 +149,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="myN-Wy-XRr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-606.87022900763361" y="-133.09859154929578"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="pmn-We-EeA">
+            <objects>
+                <viewController id="NfT-o2-90p" customClass="LoginViewController" customModule="Race" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VxG-QF-AJr">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aZA-k1-dEY">
+                                <rect key="frame" x="16" y="666" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEw-sG-a0w">
+                                <rect key="frame" x="158.33333333333334" y="600.66666666666663" width="76.666666666666657" height="32.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eqm-mA-BSZ">
+                                <rect key="frame" x="16" y="708" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oCe-e9-vao"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eqm-mA-BSZ" firstAttribute="leading" secondItem="oCe-e9-vao" secondAttribute="leading" constant="16" id="Aot-ra-Rq8"/>
+                            <constraint firstItem="IEw-sG-a0w" firstAttribute="centerX" secondItem="VxG-QF-AJr" secondAttribute="centerX" id="FFz-Zc-afL"/>
+                            <constraint firstItem="oCe-e9-vao" firstAttribute="bottom" secondItem="eqm-mA-BSZ" secondAttribute="bottom" constant="100" id="MXL-Vs-GS9"/>
+                            <constraint firstItem="aZA-k1-dEY" firstAttribute="centerX" secondItem="VxG-QF-AJr" secondAttribute="centerX" id="PID-1d-n2H"/>
+                            <constraint firstItem="aZA-k1-dEY" firstAttribute="top" secondItem="IEw-sG-a0w" secondAttribute="bottom" constant="33" id="TOe-Ob-LhK"/>
+                            <constraint firstItem="aZA-k1-dEY" firstAttribute="leading" secondItem="oCe-e9-vao" secondAttribute="leading" constant="16" id="YkO-VG-k03"/>
+                            <constraint firstItem="oCe-e9-vao" firstAttribute="trailing" secondItem="eqm-mA-BSZ" secondAttribute="trailing" constant="16" id="k37-Pr-T4f"/>
+                            <constraint firstItem="oCe-e9-vao" firstAttribute="trailing" secondItem="aZA-k1-dEY" secondAttribute="trailing" constant="16" id="vFW-WF-qOb"/>
+                            <constraint firstItem="eqm-mA-BSZ" firstAttribute="top" secondItem="aZA-k1-dEY" secondAttribute="bottom" constant="8" symbolic="YES" id="vtA-Ro-8iw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomConstraint" destination="MXL-Vs-GS9" id="RUL-hC-c1m"/>
+                        <outlet property="loginTextField" destination="aZA-k1-dEY" id="jFh-eE-CTL"/>
+                        <outlet property="passwordTextField" destination="eqm-mA-BSZ" id="KHn-Yv-rKa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oxm-Rr-Mt0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="145.80152671755724" y="-133.09859154929578"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="sn0-Za-e1P">
