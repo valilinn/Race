@@ -77,8 +77,59 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
             
         }
         
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { //1
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let index = indexPath.row
+        
+        switch settings[index].type {
+        case .switchSetting:
+            guard let cell = tableView.cellForRow(at: indexPath) as? SwitchSettingTableViewCell else { return }
+            cell.`switch`.isOn.toggle()
+            cell.switchChanged(self)
+        case .stringSetting:
+            var placeholder = settings[index].settingName
+            if let value = settings[index].settingValue as? String, value.count > 0 {
+                placeholder = value
+            }
+            presentAlert(
+                title: "Hello",
+                message: "Input \(settings[index].settingName)",
+                placeholder: placeholder
+            ) { [weak self] input in
+                self?.settings[index].settingValue = input
+            }
+        case .openSetting:
+            self.present(UIViewController(), animated: true)
+        }
         
     }
+    
+    private func presentAlert(
+        title: String,
+        message: String,
+        placeholder: String = "",
+        handler: ((String) -> ())? = nil
+    ) {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            
+            alert.addTextField { textfield in
+                textfield.placeholder = placeholder
+            }
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+            let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
+                guard let text = alert.textFields?.first?.text, text.count > 0 else { return }
+                handler?(text)
+            }
+            alert.addAction(cancelAction)
+            alert.addAction(okAction)
+            
+            present(alert, animated: true)
+    }
+    
 }
 
 extension SettingsViewController: SwitchSettingDelegate {

@@ -15,5 +15,6 @@ struct Setting {
 
 enum SettingType {
     case switchSetting
+    case stringSetting  //2
     case openSetting
 }

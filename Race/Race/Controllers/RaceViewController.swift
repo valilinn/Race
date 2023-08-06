@@ -82,7 +82,7 @@ class RaceViewController: UIViewController {
     @objc
     func carGestureAction(sender: UISwipeGestureRecognizer) {
         var destinationCoordinate = carImage.frame.origin.x
-        if destinationCoordinate == centerOriginCoordinate {
+        if abs(destinationCoordinate - centerOriginCoordinate) < 1 {
             switch sender.direction {
             case .left:
                 destinationCoordinate = leftOriginCoordinate
@@ -91,9 +91,12 @@ class RaceViewController: UIViewController {
             default:
                 break
             }
-        } else  {
-            destinationCoordinate = centerOriginCoordinate
-
+        } else {
+            if (abs(destinationCoordinate - leftOriginCoordinate) < 1 && sender.direction == .right)
+                || (abs(destinationCoordinate - rightOriginCoordinate) < 1 && sender.direction == .left) {
+                destinationCoordinate = centerOriginCoordinate
+            }
+            
         }
         
         UIView.animate(

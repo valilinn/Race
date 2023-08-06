@@ -77,20 +77,39 @@
                                     <segue destination="Uce-ai-V3Q" kind="show" id="hJX-8h-Hak"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, User!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8g-Ho-VoJ">
+                                <rect key="frame" x="145.66666666666666" y="163" width="102" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCc-cq-Ru4">
+                                <rect key="frame" x="258" y="163" width="46" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="ccg-FM-f3F"/>
+                                </constraints>
+                                <color key="tintColor" red="0.17254901959999999" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GnD-2q-sfc"/>
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                         <constraints>
                             <constraint firstItem="Ekb-PI-FBn" firstAttribute="top" secondItem="Fm9-nz-YT2" secondAttribute="bottom" constant="23" id="5gn-IY-KOl"/>
                             <constraint firstItem="Ekb-PI-FBn" firstAttribute="centerX" secondItem="uc5-qP-Ufq" secondAttribute="centerX" id="6Mi-s1-Vht"/>
+                            <constraint firstItem="BCc-cq-Ru4" firstAttribute="top" secondItem="GnD-2q-sfc" secondAttribute="top" constant="8" id="Er1-ER-K4u"/>
                             <constraint firstItem="EWv-Og-lJ3" firstAttribute="leading" secondItem="GnD-2q-sfc" secondAttribute="leading" id="Fl1-84-YsJ"/>
                             <constraint firstItem="Fm9-nz-YT2" firstAttribute="top" secondItem="GnD-2q-sfc" secondAttribute="top" constant="250" id="JhT-eS-W13"/>
+                            <constraint firstItem="B8g-Ho-VoJ" firstAttribute="centerX" secondItem="uc5-qP-Ufq" secondAttribute="centerX" id="LrA-a3-P0b"/>
                             <constraint firstItem="z3N-3T-b3s" firstAttribute="centerX" secondItem="uc5-qP-Ufq" secondAttribute="centerX" id="TpV-2B-FNG"/>
                             <constraint firstAttribute="bottom" secondItem="EWv-Og-lJ3" secondAttribute="bottom" id="URa-QQ-aUE"/>
                             <constraint firstItem="Fm9-nz-YT2" firstAttribute="centerX" secondItem="uc5-qP-Ufq" secondAttribute="centerX" id="VVv-NA-evp"/>
                             <constraint firstItem="EWv-Og-lJ3" firstAttribute="top" secondItem="uc5-qP-Ufq" secondAttribute="top" id="bIs-Qc-MaS"/>
                             <constraint firstItem="Ekb-PI-FBn" firstAttribute="top" secondItem="z3N-3T-b3s" secondAttribute="bottom" constant="23.333333333333258" id="dEs-TE-riY"/>
+                            <constraint firstItem="BCc-cq-Ru4" firstAttribute="leading" secondItem="B8g-Ho-VoJ" secondAttribute="trailing" constant="10.333333333333343" id="ehv-QP-jbr"/>
                             <constraint firstItem="EWv-Og-lJ3" firstAttribute="trailing" secondItem="GnD-2q-sfc" secondAttribute="trailing" id="lsp-vB-ETL"/>
+                            <constraint firstItem="B8g-Ho-VoJ" firstAttribute="top" secondItem="GnD-2q-sfc" secondAttribute="top" constant="8" id="ogn-u5-Fnw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Race!" id="pNw-zx-D4c">
@@ -294,6 +313,7 @@
         <image name="car01" width="1150" height="2115"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

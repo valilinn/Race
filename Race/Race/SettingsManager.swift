@@ -14,6 +14,7 @@ class SettingsManager {
     private init() { }
     
     var settings = [
+        Setting(settingName: "Username", type: .stringSetting, settingValue: ""),
         Setting(settingName: "Music", type: .switchSetting, settingValue: true),
         Setting(settingName: "Sound", type: .switchSetting, settingValue: true),
         Setting(settingName: "Obstacles", type: .openSetting, settingValue: "Cars"),
