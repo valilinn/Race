@@ -24,7 +24,7 @@ class MainViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(updateUserName(_:)), name: NSNotification.Name("updateUserName"), object: nil)
         
-        helloLabel.text = "Hello, " + (UserDefaults.standard.string(forKey: "username") ?? "") + "!"
+        helloLabel.text = "Hello, " + (UserDefaults.standard.string(forKey: "username") ?? "User") + "!"
 
     }
     
