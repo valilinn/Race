@@ -66,12 +66,14 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
-        //
+        
+        NotificationCenter.default.post(name: NSNotification.Name("updateUserName"), object: nil, userInfo: ["username": textField.text ?? ""])
+        UserDefaults.standard.set(textField.text, forKey: "username")
+
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == loginTextField {
-            NotificationCenter.default.post(name: NSNotification.Name("updateUserName"), object: nil, userInfo: ["username": textField.text])
             passwordTextField.becomeFirstResponder()
         } else if textField == passwordTextField {
             passwordTextField.endEditing(true)

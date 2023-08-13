@@ -13,12 +13,59 @@ class SettingsManager {
     
     private init() { }
     
-    var settings = [
-        Setting(settingName: "Music", type: .switchSetting, settingValue: true),
-        Setting(settingName: "Sound", type: .switchSetting, settingValue: true),
-        Setting(settingName: "Obstacles", type: .openSetting, settingValue: "Cars"),
-        Setting(settingName: "Car Color", type: .openSetting, settingValue: "Red"),
-        Setting(settingName: "Car Model", type: .openSetting, settingValue: "Lamborghini"),
-        Setting(settingName: "Something", type: .stringSetting, settingValue: "")
-    ]
+    var isMusicOn: Bool {
+        get {
+            UserDefaults.standard.bool(forKey: "isMusicOn")
+        }
+        set (newValue) {
+            UserDefaults.standard.set(newValue, forKey: "isMusicOn")
+        }
+    }
+     
+    var isSoundOn: Bool {
+        get {
+            UserDefaults.standard.bool(forKey: "isSoundOn")
+        }
+        set (newValue) {
+            UserDefaults.standard.set(newValue, forKey: "isSoundOn")
+        }
+    }
+    
+    var nameOfObstacles: String {
+        get {
+            UserDefaults.standard.string(forKey: "nameOfObstacles") ?? ""
+        }
+        set (newValue) {
+            UserDefaults.standard.set(newValue, forKey: "nameOfObstacles")
+        }
+    }
+    
+    var codeOfColor: String {
+        get {
+            UserDefaults.standard.string(forKey: "codeOfColor") ?? ""
+        }
+        set (newValue) {
+            UserDefaults.standard.set(newValue, forKey: "codeOfColor")
+        }
+    }
+    
+    var nameOfModel: String {
+        get {
+            UserDefaults.standard.string(forKey: "nameOfModel") ?? ""
+        }
+        set (newValue) {
+            UserDefaults.standard.set(newValue, forKey: "nameOfModel")
+        }
+    }
+    
+    var userName: String {
+        get {
+            UserDefaults.standard.string(forKey: "userName") ?? ""
+        }
+        set (newValue) {
+            UserDefaults.standard.set(newValue, forKey: "userName")
+        }
+    }
+    
+
 }

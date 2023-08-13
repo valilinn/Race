@@ -20,6 +20,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
+    private func setupUserDefaults() {
+        let ud = UserDefaults.standard
+        
+        if !ud.bool(forKey: "gotDefaultValues") {
+            ud.set(true, forKey: "isMusicOn")
+            ud.set(true, forKey: "isSoundOn")
+            ud.set("Obstacles", forKey: "nameOfObstacles")
+            ud.set("0000", forKey: "codeOfColor")
+            ud.set("Opel", forKey: "nameOfModel")
+            ud.set("User", forKey: "userName")
+            ud.set(true, forKey: "gotDefaultValues")
+        }
+    }
 
     // MARK: UISceneSession Lifecycle
 

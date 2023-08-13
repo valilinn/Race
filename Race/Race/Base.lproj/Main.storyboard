@@ -239,7 +239,7 @@
                                 <rect key="frame" x="0.0" y="16" width="393" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRv-Fj-FH2">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRv-Fj-FH2">
                                 <rect key="frame" x="16" y="757" width="172.66666666666666" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="hHA-z3-OaK"/>
@@ -273,7 +273,7 @@
                                     <action selector="cancelChanges:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6mj-LO-eSO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HyA-KG-dvx">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HyA-KG-dvx">
                                 <rect key="frame" x="204.66666666666663" y="757" width="172.33333333333337" height="45"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled">

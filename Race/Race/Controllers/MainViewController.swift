@@ -23,8 +23,12 @@ class MainViewController: UIViewController {
         animationView!.play()
         
         NotificationCenter.default.addObserver(self, selector: #selector(updateUserName(_:)), name: NSNotification.Name("updateUserName"), object: nil)
+        
+        helloLabel.text = "Hello, " + (UserDefaults.standard.string(forKey: "username") ?? "") + "!"
 
     }
+    
+    
     
     deinit {
         NotificationCenter.default.removeObserver(self)
